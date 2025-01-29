@@ -161,18 +161,6 @@ export function renderOrderSummary() {
         renderCheckoutHeader();
         renderOrderSummary();
         renderPaymentSummary();
-
-        // We can delete the code below (from the original solution)
-        // because instead of using the DOM to update the page directly
-        // we can use MVC and re-render everything. This will make sure
-        // the page always matches the data.
-
-        // const quantityLabel = document.querySelector(
-        //   `.js-quantity-label-${productId}`
-        // );
-        // quantityLabel.innerHTML = newQuantity;
-
-        // updateCartQuantity();
       });
     });
 }
