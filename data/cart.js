@@ -84,3 +84,16 @@ export function updateQuantity(productId, newQuantity) {
 
   saveToStorage();
 }
+
+export function loadCart(fun) {
+  const request = new XMLHttpRequest();
+
+  request.addEventListener('load', () => { 
+    console.log(request.response);   
+    
+    fun();
+  })
+
+  request.open('GET', 'https://supersimplebackend.dev/cart');
+  request.send();
+}
